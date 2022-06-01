@@ -12,7 +12,7 @@
     </Description>
     <Copyright>MohammadFayed©2022</Copyright>
     <NeutralLanguage>En-US</NeutralLanguage>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <!--<PackageReadmeFile>README.md</PackageReadmeFile>-->
     <PackageTags>Expression; Filter; Pagination; Common; Sort; </PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
