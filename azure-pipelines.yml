@@ -32,7 +32,6 @@ steps:
   inputs:
     command: 'build'
     projects: $(myproject)
-    arguments: '--runtime win-x64 --configuration $(BuildConfiguration)'
 
 - task: DotNetCoreCLI@2
   inputs:
