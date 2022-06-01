@@ -1,6 +1,9 @@
-﻿namespace AntiRap.Core.DynamicFilter;
+﻿namespace AntiRap.Core.DynamicFilter
+{
+    using System;
+    using System.Linq.Expressions;
 
-public class FilterRule<TModel>
+    public class FilterRule<TModel>
 {
     public Guid Id { get; private set; }
     public string PropertyName { get; private set; }
@@ -105,4 +108,5 @@ public class FilterRule<TModel>
         FilterValue2 = FilterValue1;
     }
 
+}
 }

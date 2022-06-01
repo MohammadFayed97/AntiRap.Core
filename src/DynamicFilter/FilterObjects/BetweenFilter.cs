@@ -1,6 +1,9 @@
-﻿namespace AntiRap.Core.DynamicFilter;
+﻿namespace AntiRap.Core.DynamicFilter
+{
+    using System;
+    using System.Linq.Expressions;
 
-internal class BetweenFilter : ObjectFilter
+    internal class BetweenFilter : ObjectFilter
 {
     public BetweenFilter(int id, string name)
         : base(id, name)
@@ -37,4 +40,5 @@ internal class BetweenFilter : ObjectFilter
 
         return false;
     }
+}
 }

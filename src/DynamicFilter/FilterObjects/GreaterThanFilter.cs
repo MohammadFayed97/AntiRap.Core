@@ -1,6 +1,8 @@
-﻿namespace AntiRap.Core.DynamicFilter;
-
-internal class GreaterThanFilter : ObjectFilter
+﻿namespace AntiRap.Core.DynamicFilter
+{
+    using System;
+    using System.Linq.Expressions;
+    internal class GreaterThanFilter : ObjectFilter
 {
     public GreaterThanFilter(int id, string name)
         : base(id, name)
@@ -62,4 +64,5 @@ internal class GreaterThanFilter : ObjectFilter
 
         return false;
     }
+}
 }

@@ -1,6 +1,8 @@
-﻿namespace AntiRap.Core.DynamicFilter;
-
-internal class StringContainsFilter : ObjectFilter
+﻿namespace AntiRap.Core.DynamicFilter
+{
+    using System;
+    using System.Linq.Expressions;
+    internal class StringContainsFilter : ObjectFilter
 {
     public StringContainsFilter(int id, string name)
         : base(id, name)
@@ -49,4 +51,5 @@ internal class StringContainsFilter : ObjectFilter
 
         return false;
     }
+}
 }
