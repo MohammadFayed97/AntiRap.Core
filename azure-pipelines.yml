@@ -12,7 +12,7 @@ pool:
 variables:
   buildConfiguration: 'Release'
   version: 1.0.0
-  myproject: 'AntiRap.Core.csproj'
+  myproject: 'src/AntiRap.Core.csproj'
 
 steps:
 - task: UseDotNet@2
