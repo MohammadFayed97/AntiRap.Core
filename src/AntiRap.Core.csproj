@@ -2,18 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <PackageId>AntiRap.Core</PackageId>
-    <Authors>Mohammad Fayed</Authors>
-    <Company>Fayed</Company>
-    <Product>AntiRap</Product>
-    <Description>
-      This package for the common things that used every day and in every project build it.
-    </Description>
-    <Copyright>MohammadFayed©2022</Copyright>
-    <NeutralLanguage>En-US</NeutralLanguage>
-    <!--<PackageReadmeFile>README.md</PackageReadmeFile>-->
-    <PackageTags>Expression; Filter; Pagination; Common; Sort; </PackageTags>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
