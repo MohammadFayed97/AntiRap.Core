@@ -1,0 +1,50 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  name: Default
+  
+variables:
+  buildConfiguration: 'Release'
+  version: 1.0.0
+  myproject: 'AntiRap.Core.csproj'
+
+steps:
+- task: UseDotNet@2
+  inputs:
+    version: '6.x'
+    includePreviewVersions: false
+
+- task: DotNetCoreCLI@2
+  displayName: 'Restore Nuget packages'
+  inputs:
+    command: 'restore'
+    projects: $(myproject)
+    feedsToUse: 'select'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Build $(buildConfiguration) for Project $(myproject)'
+  inputs:
+    command: 'build'
+    projects: $(myproject)
+    arguments: '--runtime win-x64 --configuration $(BuildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'pack'
+    packagesToPack: '$(myproject)'
+    versioningScheme: 'byEnvVar'
+    versionEnvVar: 'version'
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: '93747bff-8bc4-4a6c-a28d-05404fdcd0ce/c0bc98ee-b8ae-481e-a014-f2ec1ba044f5'
+    allowPackageConflicts: false
