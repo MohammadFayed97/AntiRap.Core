@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
     <PackageId>AntiRap.Core</PackageId>
     <Version>1.0.0</Version>
     <Authors>Mohammad Fayed</Authors>
