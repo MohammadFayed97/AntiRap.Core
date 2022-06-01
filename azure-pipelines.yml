@@ -15,10 +15,6 @@ variables:
   myproject: 'src/AntiRap.Core.csproj'
 
 steps:
-- task: UseDotNet@2
-  inputs:
-    version: '6.x'
-    includePreviewVersions: false
 
 - task: DotNetCoreCLI@2
   displayName: 'Restore Nuget packages'
