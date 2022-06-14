@@ -11,7 +11,7 @@ pool:
   
 variables:
   buildConfiguration: 'Release'
-  version: 1.0.2
+  version: 1.0.3
   myproject: 'src/AntiRap.Core.csproj'
 
 steps:

@@ -22,7 +22,6 @@
         string[] propertyParts = propertyName.Split('.');
         foreach (string propertyPart in propertyParts)
         {
-            Console.WriteLine(expression);
             expression = Expression.PropertyOrField(expression, propertyPart);
         }
 
@@ -35,7 +34,7 @@
         }
         else
         {
-            if (expression.Type != value1.GetType()) value1 = Convert.ChangeType(value1, expression.Type);
+            if (expression.Type != value1.GetType()) value1 = Convert.ChangeType(value1, Nullable.GetUnderlyingType(expression.Type) ?? expression.Type);
             unaryExpression = Expression.ConvertChecked(Expression.Constant(value1), expression.Type);
         }
         BinaryExpression body = Expression.Equal(expression, unaryExpression);
