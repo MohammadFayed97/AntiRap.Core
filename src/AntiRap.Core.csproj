@@ -2,9 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <PackageId>AntiRap.Core</PackageId>
     <Authors>Mohammad Fayed</Authors>
-    <Product>AntiRap.Core</Product>
     <Description>
       This package for the common things that used every day and in every project build it.
     </Description>
