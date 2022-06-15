@@ -8,7 +8,6 @@
     </Description>
     <Copyright>MohammadFayed©2022</Copyright>
     <PackageTags>Expression; Filter; Pagination; Common; Sort; </PackageTags>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
