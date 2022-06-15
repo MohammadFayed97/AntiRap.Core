@@ -11,7 +11,7 @@ pool:
   
 variables:
   buildConfiguration: 'Release'
-  version: 1.0.1
+  version: 1.0.2
   myproject: 'src/AntiRap.Core.csproj'
 
 steps:
@@ -34,6 +34,7 @@ steps:
     projects: $(myproject)
 
 - task: DotNetCoreCLI@2
+  displayName: 'Pack package'
   inputs:
     command: 'pack'
     packagesToPack: '$(myproject)'
@@ -41,6 +42,7 @@ steps:
     versionEnvVar: 'version'
 
 - task: NuGetCommand@2
+  displayName: 'Push to nuget.org'
   inputs:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
