@@ -11,7 +11,7 @@ pool:
   
 variables:
   buildConfiguration: 'Release'
-  version: 1.0.3
+  version: 1.0.1
   myproject: 'src/AntiRap.Core.csproj'
 
 steps:
@@ -44,6 +44,5 @@ steps:
   inputs:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
-    nuGetFeedType: 'internal'
-    publishVstsFeed: '93747bff-8bc4-4a6c-a28d-05404fdcd0ce/c0bc98ee-b8ae-481e-a014-f2ec1ba044f5'
-    allowPackageConflicts: false
+    nuGetFeedType: 'external'
+    publishFeedCredentials: 'Nuget'
